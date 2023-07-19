@@ -70,7 +70,7 @@ namespace CheckInternetStatus
 			ips.Enqueue(ip);
 
 			bool result = PingChecker.PingHost(ip);
-			string text = result ? $"online {ip}\n" : $"offline {ip}\n";
+			string text = result ? $"{ip} is Online\n" : $"{ip} is Offline\n";
 			notifyIcon.BalloonTipText = text;
 			notifyIcon.Text = text;
 			notifyIcon.Icon = result ? onlineIcon : offlineIcon;
